@@ -1,0 +1,71 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin background-gradient($style, $gradients...) {
+	#{$style}: -webkit-linear-gradient($gradients);
+	#{$style}: -moz-linear-gradient($gradients);
+	#{$style}: -o-linear-gradient($gradients);
+	#{$style}: -ms-linear-gradient($gradients);
+	#{$style}: linear-gradient($gradients);
+}
+
+body{
+	font-family:"Open Sans",sans-serif;
+}
+
+h1, h2 {
+	font-size: 2em;
+	color: #666;
+	text-align: center;
+	display:none;
+}
+
+header > div#banner {
+	@include border-radius(11px);
+	background-image: url(/images/gulp.png);
+	height: 200px;
+	width: 80%;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-color: #CF4646;
+	background-position: top center;
+}
+
+.box {
+	@include border-radius(11px);
+	height: 140px;
+	width: 140px;
+	background-color:darkorchid;
+	float: left;
+	margin: 20px;
+	font-size: 2em;
+	color: white;
+	padding:40px;
+	display:none;
+}
+
+.box.two{
+background-color:darkslateblue;	
+}
+
+.box.three{
+background-color:cadetblue;	
+}
+
+.box.four{
+background-color:cornflowerblue;
+}
+
+.box h2{
+	color:white;
+	font-size: 1.2em;
+}
+
+.boxContainer {
+	width: 68%;
+	margin: 0 auto;
+}
